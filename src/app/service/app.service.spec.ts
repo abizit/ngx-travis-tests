@@ -71,7 +71,7 @@ describe('AppService', () => {
         // req.flush(error, {status: 401, statusText: 'Wrong Password'});
         service.login('1910', '11').subscribe(
             () => fail('should Fail'),
-            (err: HttpErrorResponse) => expect(err).toEqual(error)
+            (err) => expect(err).toEqual(error)
         );
 
     });
